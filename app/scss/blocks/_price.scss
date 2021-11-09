@@ -1,0 +1,106 @@
+.price {
+    background-color: $primary-color;
+    padding-top: 59px;
+    padding-bottom: 65px;
+    // .price__title
+
+    &__title {
+        color: $white-color;
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    // .price__inner
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .price__item
+
+    &__item {
+        display: flex;
+        padding: 81px 2.4em;
+        flex-direction: column;
+        align-items: center;
+        max-width: 356px;
+        border-radius: 63px;
+        background-color: #fff;
+        box-shadow: 0px 0px 40px rgba(146, 163, 255, 0.25);
+    }
+
+    // .price__item-title
+
+    &__item-title {
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 34px;
+    }
+
+    &__item-title--blue {
+        color: $blue-color;
+    }
+    &__item-title--yellow {
+        color: $accent-color;
+    }
+    &__item-title--pink {
+        color: $pink-color;
+    }
+
+    // .price__item-price
+
+    &__item-price {
+        padding: 15px 102px;
+        border-radius: 35px;
+        text-decoration: none;
+        color: $primary-color;
+        margin-bottom: 19px;
+        transition: all .3s;
+    }
+    &__item-price--blue {
+        background-color: $blue-color;
+    }
+    &__item-price--yellow {
+        background-color: $accent-color;
+    }
+    &__item-price--pink {
+        background-color: $pink-color;
+    }
+
+    &__item-price--blue:hover {
+        background-color: darken($blue-color, 10%);
+    }
+    &__item-price--yellow:hover {
+        background-color: darken($accent-color, 10%);
+    }
+    &__item-price--pink:hover {
+        background-color: darken($pink-color, 10%);
+    } 
+    &__item-price--blue:active {
+        box-shadow: 0 0 10px $blue-color;
+    }
+    &__item-price--yellow:active {
+        box-shadow: 0 0 10px $accent-color;
+    }
+    &__item-price--pink:active {
+        box-shadow: 0 0 10px $pink-color;
+    } 
+    
+
+    // .price__item-mounth
+
+    &__item-mounth {
+        color: #8D8D8D;
+        margin-bottom: 41px;
+    }
+
+    // .price__item-text
+
+    &__item-text {
+    }
+}

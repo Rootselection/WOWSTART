@@ -1,0 +1,151 @@
+.steps-title {
+    text-align: center;
+    margin: 0 0 53px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 200px;
+    transition: padding-bottom .6s;
+    // .steps__item
+
+    &--active {
+        padding-bottom: 0;
+    }
+
+    &__item {
+        width: 187px;
+        height: 187px;
+        background-color: $pink-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 20;
+        transition: opacity .2s 0 ease-in;
+        cursor: pointer;
+    }
+
+    &__item::after {
+        content: 'Click on me!';
+        text-transform: uppercase;
+        position: absolute;
+        bottom: -15%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 33px;
+        text-shadow: 0 0 10px $primary-color;
+        white-space: nowrap;
+    }
+
+    &--active &__item::after {
+        display: none;
+    }
+
+    &--active &__item{
+        transition: all .2s .4s ease-in;
+    }
+
+    &__item:nth-of-type(1) {
+        width: 407px;
+        height: 407px;
+        background-color: $pink-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        z-index: 50;
+        transform: translateX(-50%);
+        transition: all .7s;
+    }
+
+    &--active &__item:nth-of-type(1) {
+        width: 187px;
+        height: 187px;
+        position: relative;
+        transform: translateX(0);
+        left: 0;
+    }
+
+    &--active &__item-text {
+        position: absolute;
+        left: 34%;  
+        bottom: -60px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 33px;
+        display: block;
+    }
+
+    &--active &__item:nth-of-type(2),
+    &--active &__item:nth-of-type(3),
+    &--active &__item:nth-of-type(4),
+    &--active &__dots {
+        opacity: 1;
+    }
+
+    &__item:nth-of-type(2) {
+        opacity: 0;
+        background-color: $accent-color;
+    }
+
+    &__item:nth-of-type(3) {
+        opacity: 0;
+        background-color: $primary-color;
+    }
+    &__item:nth-of-type(4) {
+        opacity: 0;
+        background-color: $blue-color;
+    }
+    // .steps__item-img
+
+    &__item-img {
+    }
+
+    // .steps__dots
+
+    &__dots {
+        opacity: 0;
+        font-size: 60px;
+        line-height: 1;
+        margin: 4% 0px;
+        color: $primary-color;
+        position: relative;
+        transition: all .1s .8s;
+    }
+
+    &__dots::after {
+        content: '';
+        right: 0;
+        bottom: 30px;
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        position: absolute;
+        z-index: 10;
+    }
+
+    &-active &__dots::after {
+        transition: all 0;
+    }
+
+    &__item-text {
+        position: absolute;
+        left: 40%;  
+        bottom: -60px;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 33px;
+        display: none;
+    }
+}

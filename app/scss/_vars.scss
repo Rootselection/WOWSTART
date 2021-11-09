@@ -1,0 +1,19 @@
+$primary-color: hsla(255, 59%, 34%, 100%);
+$accent-color: hsla(47, 100%, 50%, 100%);
+
+$white-color: #fff;
+$gray-color: #E1E1E1;
+$blue-color: hsla(190, 100%, 50%, 100%);
+$pink-color: hsla(344, 100%, 67%, 100%);
+$green-color: hsla(68, 91%, 46%, 100%);
+
+%title-left-line {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 57px;
+    background-color: $accent-color;
+    position: absolute;
+    top: 0;
+    left: -34px;
+}

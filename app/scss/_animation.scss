@@ -1,0 +1,407 @@
+#scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.triangle__wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+    position: absolute;
+    z-index: -1;
+
+    &__header--one {
+        border-width: 0 29px 42px 29px;
+        top: 380px;
+        left: 580px;
+        transform: rotate(-40deg);
+    }
+    &__header--two {
+        border-width: 0 12px 22px 12px;
+        bottom: 140px;
+        right: 380px;
+        transform: rotate(-20deg);
+    
+    }
+    &__header--three {
+        border-width: 0 36px 71px 36px;
+        bottom: 22%;
+        right: 20px;
+        transform: rotate(42deg);
+    
+    }
+    &__header--four {
+        border-width: 0 54px 92px 54px;
+        bottom: 2%;
+        left: 640px;
+        transform: rotate(6deg);
+    
+    }
+}
+
+.triangle--yellow {border-color: transparent transparent $accent-color transparent;}
+.triangle--blue {border-color: transparent transparent $blue-color transparent;}
+.triangle--pink {border-color: transparent transparent $pink-color transparent;}
+.triangle--gray {border-color: transparent transparent $gray-color transparent;}
+
+// 
+
+.registration {
+    &__figure--first {
+        position: absolute;
+        top: 28%;
+    }
+    &__figure-img--anim {
+        transition: all .8s ease;
+    }
+    .registration__figure--active &__figure--first{
+        transform: translate(160px, -120px) rotate(180deg);
+        
+    }
+    .registration__figure--active &__figure--second {
+        transform: translate(-20px, -80px) rotate(45deg);
+    }
+    .registration__figure--active &__figure--third {
+        transform: translate(-170px, -90px) rotate(-125deg);
+    }
+    .registration__figure--active &__figure--fourth {
+        transform: translate(50px, 310px) rotate(20deg);
+    }
+    .registration__figure--active &__figure--fifth {
+        transform: translate(190px, 110px) rotate(95deg);
+    }
+    .registration__figure--active &__figure--sixth {
+        transform: translate(-130px, -160px) rotate(-175deg);
+    }
+    .registration__figure--active &__figure--seventh {
+        transform: translate(-200px, 20px) rotate(260deg);
+    }
+}
+
+.steps {
+    &--active &__item:nth-of-type(2),
+    &--active &__item:nth-of-type(3),
+    &--active &__item:nth-of-type(4),
+    &--active &__dots {
+        opacity: 1;
+    }
+
+    &--active &__item:nth-of-type(1) {
+        box-shadow: 0 0 10px darken($pink-color, 20%);
+        transition: all .7s, box-shadow .5s .6s;
+        opacity: 1;
+    }
+    &--active &__item:nth-of-type(2) {
+        box-shadow: 0 0 10px darken($accent-color, 20%);
+        transition: box-shadow .5s 1.2s, opacity .5s 1.3s;
+        opacity: 1;
+    }
+    &--active &__item:nth-of-type(3) {
+        box-shadow: 0 0 10px darken($primary-color, 20%);
+        transition: box-shadow .5s 1.9s, opacity .5s 1.8s;
+        opacity: 1;
+    }
+    &--active &__item:nth-of-type(4) {
+        box-shadow: 0 0 10px darken($blue-color, 20%);
+        transition: box-shadow .5s 2.6s, opacity .5s 2.5s;
+        opacity: 1;
+    }
+
+    &--active &__dots::after {
+        width: 100%;
+        width: 0;
+        right: -50px;
+        transition: all 1.2s .8s;
+
+    }
+
+    &--active &__dots:nth-of-type(2)::after {
+        transition: all 1s 1.4s;
+    }
+    &--active &__dots:nth-of-type(3)::after {
+        transition: all 1s 2s;
+    }
+
+}
+
+.subscribe {
+
+    &__left-svg svg{
+        animation: 5s linear 0s infinite subscribeIcon;
+    }
+}
+
+@keyframes subscribeIcon {
+    0% {transform: rotate(0);}
+    25% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(240deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
+
+.subscribe .triangle__header--one {
+    z-index: 0;
+    left: 2%;
+    top: 35%;
+    bottom: auto;
+    right: auto;
+    transform: rotate(-130deg) scaleY(1.5);
+    transform-origin: 100%, 0;
+    animation: kenburns-bottom-right 28s linear both infinite;
+}
+
+@keyframes kenburns-bottom-right {
+    0% {
+      transform: scale(1) translate(0, 0) rotate(-130deg);
+      transform-origin: 84% 84%;
+    }
+    50% {
+      transform: scale(1.25) translate(250px, 195px) rotate(180deg);
+      transform-origin: right bottom;
+    }
+    75% {
+        transform: scale(1.25) translate(250px, -155px) rotate(230deg);
+        transform-origin: right bottom;
+      }
+    100% {
+        transform: scale(1) translate(0, 0) rotate(-130deg);
+        transform-origin: 84% 84%;
+      }
+  }
+  
+
+
+.subscribe .triangle--yellow-subscribe {
+    z-index: 0;
+    right: 2%;
+    top: auto;
+    left: auto;
+    bottom: 15%;
+    transform: rotate(30deg) scaleY(1.5) scaleX(1.2);
+    animation: kenburns-top-left 28s linear both infinite;
+}
+
+@keyframes kenburns-top-left {
+    0% {
+      transform: scale(1) translate(0, 0) rotate(30deg);
+      transform-origin: 16% 16%;
+    }
+    25% {
+        transform: scale(1.15) translate(-120px, -115px) rotate(90deg);
+        transform-origin: top left;
+      }
+      50% {
+        transform: scale(1.25) translate(-320px, -115px) rotate(120deg);
+        transform-origin: top left;
+      } 
+
+    75% {
+        transform: scale(1.15) translate(-520px, 115px) rotate(180deg);
+        transform-origin: top left;
+      }
+    100% {
+      transform: scale(1.25) translate(0, 0) rotate(30deg);
+      transform-origin: top left;
+    }
+  }
+  
+
+.subscribe .triangle__header--two {
+    z-index: 0;
+    right: 57%;
+    top: auto;
+    left: auto;
+    top: 28%;
+    transform: rotate(-25deg) scaleY(2.3) scaleX(2);
+    animation: kenburns-bottom 33s linear both infinite;
+}
+
+@keyframes kenburns-bottom {
+    0% {
+      transform: scale(2.3, 2) translate(0, -50px) rotate(-25deg);
+      transform-origin: 50% 84%;
+    }
+    25% {
+        transform: scale(2.6) translate(255px, -50px) rotate(225deg);
+        transform-origin: bottom;
+      }
+      50% {
+        transform: scale(2.3, 2) translate(315px, 50px) rotate(-175deg);
+        transform-origin: bottom;
+      }
+      75% {
+        transform: scale(2.6) translate(255px, 150px) rotate(225deg);
+        transform-origin: bottom;
+      }
+    100% {
+        transform: scale(2.3, 2) translate(0, -50px) rotate(-25deg);
+        transform-origin: 50% 84%;
+    }
+  }
+
+.subscribe .triangle--blue-subscribe {
+    z-index: 0;
+    left: 20%;
+    bottom: 19%;
+    right: auto;
+    top: auto;
+    transform: rotate(45deg) scaleY(0.8) scaleX(0.8);
+    animation: kenburns-top-right-t 33s linear both infinite;
+}
+
+@keyframes kenburns-top-right-t {
+    0% {
+      transform: scale(0.8) translate(0, 150px) rotate(45deg);
+      transform-origin: 84% 16%;
+    }
+    25% {
+        transform: scale(1.2) translate(360px, -275px) rotate(195deg);
+        transform-origin: right top;
+    }  
+    50% {
+        transform: scale(0.8) translate(820px, -175px) rotate(355deg);
+        transform-origin: right top;
+    }
+    25% {
+        transform: scale(1.2) translate(360px, -275px) rotate(195deg);
+        transform-origin: right top;
+    }  
+    100% {
+        transform: scale(0.8) translate(0, 150px) rotate(45deg);
+        transform-origin: 84% 16%;
+      }
+  }
+
+.subscribe .triangle--pink--subscribe {
+    z-index: 0;
+    left: auto;
+    bottom: 18%;
+    right: 46%;
+    top: auto;
+    transform: rotate(75deg) scaleY(1) scaleX(1.2);
+    animation: kenburns-top-left 22s linear both infinite;
+}
+
+@keyframes kenburns-top-left {
+    0% {
+      transform: scale(1) translate(0, 0) rotate(75deg);
+      transform-origin: 16% 16%;
+    }
+    25% {
+      transform: scale(1.25) translate(-200px, -15px) rotate(-75deg);
+      transform-origin: top left;
+    }
+    50% {
+        transform: scale(1.25) translate(-450px, -295px) rotate(75deg);
+        transform-origin: top left;
+    }
+    75% {
+        transform: scale(1.25) translate(-200px, -15px) rotate(-190deg);
+        transform-origin: top left;
+    }
+    100% {
+        transform: scale(1) translate(0, 0) rotate(75deg);
+        transform-origin: 16% 16%;
+    }
+  }
+
+.subscribe .triangle--gray--subscribe {
+    border-color: transparent transparent $gray-color transparent;
+    z-index: 0;
+    left: 0;
+    bottom: 18%;
+    right: auto;
+    top: auto;
+    transform: rotate(65deg) scaleY(0.3) scaleX(0.4);
+    animation: kenburns-top-right 25s linear both infinite;
+}
+
+@keyframes kenburns-top-right {
+    0% {
+      transform: scale(0.3, 0.4) translate(0, 0) rotate(65deg);
+      transform-origin: 84% 16%;
+    }
+    25% {
+        transform: scale(0.7, 0.9) translate(420px, 15px) rotate(160deg);
+        transform-origin: right top;
+    }
+    50% {
+        transform: scale(0.3, 0.4) translate(820px, -275px) rotate(-70deg);
+        transform-origin: right top;
+    }
+    75% {
+        transform: scale(0.7, 0.8) translate(420px, -15px) rotate(160deg);
+        transform-origin: right top;
+    }
+    100% {
+        transform: scale(0.3, 0.4) translate(0, 0) rotate(65deg);
+        transform-origin: 84% 16%;
+    }
+  }
+
+  .video-bg {
+    animation: scaleVideo 82s linear both infinite;
+}
+
+@keyframes scaleVideo {
+    0% {transform: scaleX(1) rotate(-360deg);}
+    50% {transform: scaleX(2) rotate(360deg);}
+    100% {transform: scaleX(1) rotate(-360deg);}
+}
+
+.teamwork {
+    &__svg{
+        path {
+            animation: teamColor 3s both infinite;
+            fill: $green-color;
+
+            @keyframes teamColor {
+                0% {fill: $green-color;}
+                20% {fill: $blue-color;}
+                40% {fill: $pink-color;}
+                60% {fill: lighten($primary-color, 30%);}
+                80% {fill: $accent-color;}
+                100% {fill: $green-color;}
+            }
+        }
+    }
+    &__svg:nth-of-type(2){ 
+        path {
+            animation-delay: 1s;
+        }
+    }
+    &__svg:nth-of-type(3){ 
+        path {
+            animation-delay: 2s;
+        }
+    }
+    &__svg:nth-of-type(4){ 
+        path {
+            animation-delay: 3s;
+        }
+    }
+    &__svg:nth-of-type(5){ 
+        path {
+            animation-delay: 4s;
+        }
+    }
+    &__svg:nth-of-type(6){ 
+        path {
+            animation-delay: 5s;
+        }
+    }
+
+}

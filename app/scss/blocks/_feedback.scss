@@ -1,0 +1,36 @@
+.feedback {
+    padding: 78px 0 77px;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    // .feedback__inner
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 170px;
+    }
+
+    // .feedback__item
+
+    &__item {
+        max-width: 238px;
+    }
+
+    // .feedback__item-avatar
+
+    &__item-avatar {
+        max-width: 220px;
+        max-height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 46px;
+    }
+
+    // .feedback__item-text
+
+    &__item-text {
+    }
+}
+.container {
+}

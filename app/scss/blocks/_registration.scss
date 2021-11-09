@@ -1,0 +1,131 @@
+.registration {
+    padding-top: 95px;
+    padding-bottom: 158px;
+    position: relative;
+    // .registration__inner
+
+    &__inner {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 110px;
+    }
+
+    // .registration__figure
+
+    &__figure {
+        width: 258px;
+        height: 394px;
+        margin-top: 75px;
+        position: relative;
+    }
+
+    // .registration__figure-img
+
+    &__figure-img {
+    }
+
+    &__figure--first {
+        position: absolute;
+        top: 28%;
+    }
+
+    &__figure--second {
+        position: absolute;
+        bottom: 38%;
+        left: 10%;
+    }
+    &__figure--third {
+        position: absolute;
+        bottom: 15%;
+        right: 10%;
+    }
+    &__figure--fourth {
+        position: absolute;
+        top: 0;
+        right: 25%;
+    }
+    &__figure--fifth {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+    }
+    &__figure--sixth {
+        position: absolute;
+        bottom: 35%;
+        right: 24%;
+    }
+    &__figure--seventh {
+        position: absolute;
+        bottom: 18%;
+        right: 8%;
+    }
+
+    // .registration__content
+
+    &__content {
+        text-align: center;
+    }
+
+    // .registration__content-title
+
+    &__content-title {
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+
+    // .registration__content-text
+
+    &__content-text {
+        max-width: 400px;
+        margin: 0 auto;
+        margin-bottom: 46px;
+    }
+
+    // .registration__content-btn
+
+    &__content-btn {
+        display: block;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        padding: 15px 109px;
+        color: #fff;
+        background-color: $pink-color;
+        border-radius: 35px;
+        text-decoration: none;
+        margin: 0 auto 38px;
+        cursor: pointer;
+        transition: all .3s;
+        border: none;
+        outline: none;
+    }
+
+    &__content-btn:hover {
+        background-color: darken($pink-color, 10%);
+    }
+    &__content-btn:active {
+        box-shadow: 0 0 10px $pink-color;
+    }
+
+    // .registration__content-sign-up
+
+    &__content-sign-up {
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
+
+.steps {
+
+    // .steps__item
+
+    &__item {
+    }
+
+    // .steps__item-img
+
+    &__item-img {
+    }
+}

@@ -1,0 +1,27 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'animation';
+
+
+
+// 
+.main {
+}
+
+@import "blocks/header.scss";
+@import "blocks/read-more";
+@import "blocks/product.scss";
+@import "blocks/pluses.scss";
+@import "blocks/price.scss";
+@import "blocks/registration.scss";
+@import "blocks/steps.scss";
+@import "blocks/subscribe.scss";
+@import "blocks/feedback.scss";
+@import "blocks/partners.scss";
+@import "blocks/video.scss";
+@import "blocks/teamwork.scss";
+@import "blocks/footer.scss";
+
+@import 'media';

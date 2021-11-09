@@ -1,0 +1,49 @@
+.partners {
+
+    // .partners__title
+
+    &__title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 90px;
+    }
+
+    &__title::after,
+    &__title::before {
+        content: '';
+        display: block;
+        width: 28%;
+        position: absolute;
+        top: 50%;
+        height: 2px;
+        background-color: #BBBBBB;
+    }
+
+    &__title::after {
+        right: 0;
+    }
+
+    // .partners__inner
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    // .partners__item
+
+    &__item {
+    }
+
+    // .partners__item-img
+
+    &__item-img {
+        margin-bottom: 30px;
+    }
+
+    // .partners__item-text
+
+    &__item-text {
+        max-width: 250px;
+    }
+}
